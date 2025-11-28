@@ -1,51 +1,30 @@
-<!DOCTYPE html><html lang="en">
- <head>	
-  <meta charset="UTF-8">	
-    <title>Shipping and Billing</title>	
-    <style>		
-        input{			
-          border:1px solid black;
-	}		
-        input:focus{
-	   background-color: #E6E6E6;		
-        }
-	fieldset{
- 	   margin-bottom: 4%;
-	}	
-    </style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Photo Gallery</title>
+	<link rel="stylesheet" href="css/gallery.css">
+	<script src="js/gallery.js"></script>
+</head>
+<body>
+	<h1>Interactive Photo Gallery</h1>
 
-    <script type="text/javascript">
-    	function billingFunction(){
-    		var checked = document.getElementById("same").checked;
+	<div id="image">
+		Hover over an image below to display here.
+	</div>
 
-    		document.getElementById("billingName").value = checked? 
-    								document.getElementById("shippingName").value : "";
+	<div class="gallery">
+		<img class="preview" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon.jpg" alt="Styling with a Bandana" onmouseover="upDate(this)" onmouseout="unDo()" tabindex="0" onfocus="upDate(this)" onblur="unDo()">
 
-    		document.getElementById("billingZip").value = checked? 
-    								document.getElementById("shippingZip").value : "";
-    	}
-    </script>
+		<img class="preview" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon2.JPG" alt="With My Boy" onmouseover="upDate(this)" onmouseout="unDo()" tabindex="0" onfocus="upDate(this)" onblur="unDo()">
 
-  </head>
-  <body>
-	<h1>JavaScript Homework</h1>	
-        <p>Add the JavaScript code needed to enable auto-complete on this form.  Whenever the checkbox is checked, the code should automatically copy the values from Shipping Name and Shipping Zip into the Billing Name and Billing Zip.  If the checkbox is unchecked, the Billing Name and Billing Zip should go blank.</p>
+		<img class="preview" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon3.jpg" alt="Young Puppy" onmouseover="upDate(this)" onmouseout="unDo()" tabindex="0" onfocus="upDate(this)" onblur="unDo()">
 
-		<form>		
-        <fieldset>
-	  <legend>Shipping Information</legend>			  <label for ="shippingName">Name:</label>		  <input type = "text" name = "Name" id = "shippingName" required><br/>
+		<img class="preview" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon4.jpg" alt="Playing in the Yard" onmouseover="upDate(this)" onmouseout="unDo()" tabindex="0" onfocus="upDate(this)" onblur="unDo()">
 
-	  <label for = "shippingzip">Zip code:</label>		  <input type = "text" name = "zip" id = "shippingZip" pattern = "[0-9]{5}" required><br/>
-        </fieldset>
-	<input type="checkbox" id="same" name="same" onchange= "billingFunction()"/>		
-        <label for = "same">Is the Billing Information the Same?</label>						
-        <fieldset>
- 	  <legend>Billing Information</legend>			  <label for ="billingName">Name:</label>		  <input type = "text" name = "Name" id = "billingName" required><br/>
-	   
-          <label for = "billingzip">Zip code:</label>		  <input type = "text" name = "zip" id = "billingZip" pattern = "[0-9]{5}" required><br/>
-	</fieldset>
+		<img class="preview" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon5.jpg" alt="Cuddling Time" onmouseover="upDate(this)" onmouseout="unDo()" tabindex="0" onfocus="upDate(this)" onblur="unDo()">
 
-	<input type = "submit" value = "Verify"/>	
-    </form>
-  </body>
+		<img class="preview" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon6.jpg" alt="Cute Puppy Smile" onmouseover="upDate(this)" onmouseout="unDo()" tabindex="0" onfocus="upDate(this)" onblur="unDo()">
+	</div>
+</body>
 </html>
